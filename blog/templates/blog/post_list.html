@@ -6,6 +6,13 @@
 </head>
 <body>
 <h1>Selamat datang di blog gue</h1>
-<p>Python</p>
+{% for post in posts %}
+    <div>
+{#        <p>published: {{ post.published_date }}</p>#}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
 </body>
 </html>
